@@ -1,0 +1,124 @@
+body {
+    font-family: "Arial", "Calibri", sans-serif;
+    background-color: #eaf1f2;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+}
+/* Add this style to your existing CSS or create a new CSS file */
+
+/* Specific style for the role paragraph */
+p.role {
+    color: #555; /* Set the color for the role text */
+    font-style: italic; /* Make the text italic */
+    font-weight: bold; /* Make the text bold */
+}
+hr {
+    border: 4px solid #342794;
+    margin: 20px 0; /* Reduced margin for denser spacing */
+}
+
+
+.student-name {
+    background-color: #b195df;  /* Specify the background color you want */
+    color: #fff;  /* Set the text color to white or any contrasting color */
+    padding: 10px;  /* Add padding for better appearance */
+    display: inline-block;  /* Ensure the background color only covers the text width */
+    border-radius: 5px;  /* Add rounded corners */
+}
+/* Add these styles to your existing CSS or create a new CSS file */
+
+/* Contact Information Section */
+h2 {
+    color: #b195df; /* Set heading color */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+b {
+    color: #555; /* Set color for bold text */
+}
+
+a {
+    color: #b195df; /* Set link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+header {
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;  
+    margin-right: 20px;  
+
+h1, h2, p, li {
+    margin-bottom: 10px;  
+}
+
+ul {
+    list-style-type: square; 
+}
+
+hr {
+    border: 1px solid #ddd;  
+}
+
+
+a {
+    color: #007bff; 
+    text-decoration: none;  
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+
+p {
+    text-align: justify;
+}
+
+
+ul.education-list {
+    list-style-type: none;  
+    padding: 0;
+}
+
+ul.education-list li {
+    margin-bottom: 15px; 
+}
+
+
+ul.certificates-list {
+    list-style-type: none;  
+    padding: 0;
+}
+
+ul.certificates-list li {
+    margin-bottom: 10px;  
+}
+
+
+ul.skills-list {
+    list-style-type: none; 
+    padding: 0;
+}
+
+ul.skills-list li {
+    margin-bottom: 8px;  
+}
+

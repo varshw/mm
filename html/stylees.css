@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h4 {
+    color: #071af2;
+}
+/* Add this CSS to style the lunch break */
+h2.lunch-break {
+    background-color: #FFD700; /* Set the background color for the lunch break */
+    text-align: center;
+    line-height: 1.5; /* Adjust the line height for better spacing */
+    padding: 10px;
+    margin: 0;
+}
+/* Add this style to your existing CSS */
+
+.dl-lab-cell {
+    background-color: #ffd699; /* Set your desired background color */
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+td, th {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #cec8eb;
+}
+
+table td[colspan="5"] {
+    background-color: #cec8eb;
+}
+
+table td[rowspan="3"] {
+    background-color: #e0e0e0;
+}
+
+table td[rowspan="6"] {
+    background-color: #f0f0f0;
+}
+
+table td[rowspan="4"] {
+    background-color: #e0e0e0;
+}
+
+table td[rowspan="3"]:first-child {
+    background-color: #e0e0e0;
+}
+
+table td[rowspan="3"]:last-child {
+    background-color: #f0f0f0;
+}
+
+table td[rowspan="4"]:first-child {
+    background-color: #e0e0e0;
+}
+
+table td[rowspan="4"]:last-child {
+    background-color: #f0f0f0;
+}
+
+table td[rowspan="6"]:first-child {
+    background-color: #e0e0e0;
+}
+
+table td[rowspan="6"]:last-child {
+    background-color: #f0f0f0;
+}
+
+table td[rowspan="10"] {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallelogram</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: black; /* Make the background black */
+    }
+    .parallelogram-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust as needed */
+    }
+    .parallelogram {
+      width: 90px; /* Adjust width as needed */
+      height: 400px; /* Adjust height as needed */
+      position: relative;
+    }
+    .parallelogram .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+    .parallelogram:first-child {
+    width: 50px;
+      background-color: white; /* Change the color to white */
+      transform: skew(-40deg); /* Skew the first parallelogram */
+      right: 10px;
+      border: none; /* Remove the border */
+    }
+    .parallelogram:last-child {
+    width: 110px;
+      background-color: #000; /* Make sure the second parallelogram is black */
+      transform: skew(30deg); /* Skew the second parallelogram */
+      right: 110px; /* Move the second parallelogram a little bit to the left */
+      border: 35px solid #fff; /* Make the border larger */
+    }
+  </style>
+</head>
+<body>
+
+<div class="parallelogram-container">
+  <div class="parallelogram">
+    <div class="content">
+    </div>
+  </div>
+  <div class="parallelogram">
+    <div class="content">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

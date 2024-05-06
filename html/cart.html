@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Cart Example</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      color: rgb(5, 0, 7);
+    }
+    h2, h3 {
+      color: rgb(103, 66, 102);
+    }
+    button {
+      background-color: #cda9df;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 50px;
+      margin-top: 10px;
+    }
+    .items-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .item button {
+      width: 100px;
+    }
+    #cart {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #cart li {
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #cart li img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    #cart li button {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add to Cart Example</h1>
+  <div class="items-container" id="items">
+    <div class="item">
+      <img src="C:\Users\91995\OneDrive\Desktop\bunch-of-roses-as-a-bed-royalty-free-image-964650398-1554826447.jpg" alt="Rose">
+      <div>
+        <h3>Rose</h3>
+        <p>Price: Rs.100</p>
+        <button onclick="addToCart('Rose', 100, 'C:\Users\91995\OneDrive\Desktop\bunch-of-roses-as-a-bed-royalty-free-image-964650398-1554826447.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="C:\Users\91995\OneDrive\Desktop\Lily-1024x683.jpg.webp" alt="Lily">
+      <div>
+        <h3>Lily</h3>
+        <p>Price: Rs.50</p>
+        <button onclick="addToCart('Lily', 50, 'C:\Users\91995\OneDrive\Desktop\Lily-1024x683.jpg.webp')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="C:\Users\91995\OneDrive\Desktop\jasmine-flowers.jpg" alt="Jasmine">
+      <div>
+        <h3>Jasmine</h3>
+        <p>Price: Rs.70</p>
+        <button onclick="addToCart('Jasmine', 80, 'C:\Users\91995\OneDrive\Desktop\jasmine-flowers.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="C:\Users\91995\OneDrive\Desktop\shutterstock_559001392.jpg" alt="Tulip">
+      <div>
+        <h3>Tulip</h3>
+        <p>Price: Rs.220</p>
+        <button onclick="addToCart('Tulip', 220, 'C:\Users\91995\OneDrive\Desktop\shutterstock_559001392.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <h2>Cart</h2>
+  <ul id="cart"></ul>
+  <h3>Total: <span id="total">Rs.0</span></h3>
+  <script>
+    function addToCart(itemName, price, imageUrl) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let existingItem = cart.find(item => item.name === itemName);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({
+          name: itemName,
+          price: price,
+          quantity: 1,
+          imageUrl: imageUrl
+        });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+    function removeFromCart(itemName) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let existingItem = cart.find(item => item.name === itemName);
+      if (existingItem && existingItem.quantity > 1) {
+        existingItem.quantity -= 1;
+      } else {
+        cart = cart.filter(item => item.name !== itemName);
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+    function displayCart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cartList = document.getElementById('cart');
+      let totalElement = document.getElementById('total');
+      let total = 0;
+      cartList.innerHTML = '';
+      cart.forEach(function(item) {
+        let li = document.createElement('li');
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        li.innerHTML = `
+          <div class="item">
+            <img src="${item.imageUrl}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div>
+              <span>${item.name} - Rs.${item.price} x ${item.quantity}</span>
+              <button onclick="removeFromCart('${item.name}')">Remove</button>
+            </div>
+            <div>Rs.${itemTotal}</div>
+          </div>
+        `;
+        cartList.appendChild(li);
+      });
+      totalElement.textContent = `Total: Rs.${total}`;
+    }
+    displayCart();
+  </script>
+</body>
+</html>

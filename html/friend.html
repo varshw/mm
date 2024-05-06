@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AJAX with JSON</title>
+<script type="text/javascript">
+ function fetch()
+ {
+    var url="friends.json"; 
+    var xhttp=new XMLHttpRequest();
+    xhttp.open("GET",url,true);
+    xhttp.send();
+    xhttp.onreadystatechange=function(){
+    	if(this.status=200 && this.readyState==4)
+       	{
+       		alert("result"+this.responseText);
+       	var myFriend=JSON.parse(this.responseText);
+       	var str=""; 
+  		for(var i=0;i<myFriend.friends.length;++i)
+       	 {
+  		str+="<h1>"+myFriend.friends[i].name+"</br>";
+       	 }
+       	 alert(str);
+       	 document.getElementById("output").innerHTML="<h1>"+str+"</h1>";
+       	
+       	}
+    }
+ }
+</script>
+</head>
+<body>
+    <form name="sona">
+        <h1> Click Fetch Friends button to view all my friends deatils</h1>
+        <input type="button" value="Fetch Friends" onclick="fetch()"/>
+        <div id="output"> </div>    
+      </form>
+</body>
+</html>

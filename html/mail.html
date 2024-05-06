@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX with PHP and MySQL</title>
+    <script type="text/javascript">
+        function check() {
+            var email = document.getElementById("email").value;
+            var xhttp = new XMLHttpRequest();
+            var url = "http://localhost/fsdLab/usersDB.php?email=" + email;
+            alert("hello " + email + "--" + url);
+
+            xhttp.open("GET", url, true);
+
+            //xhttp.open("POST", "http://localhost/ajax/usersDB1.php", true);
+            //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // xhttp.send("email=" + email);
+            xhttp.send();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1> Enter Your Name </h1>
+        <input type="text" name="name" id="name"/>
+        <h1> Preferred E-Mail ID </h1>
+        <input type="text" id="email" name="email" onblur="check()"/>
+        <div id="demo"></div>
+        <h1> Password </h1>
+        <input type="password" name="password" />
+        <h1> Re-Password </h1>
+        <input type="password" name="password1" />
+        <br/>
+        <input type="submit" value="register" id="button" />
+    </form>
+</body>
+</html>

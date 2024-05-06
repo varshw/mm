@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f1e8e4;
+}
+</style>
+</head>
+<body>
+<form method="post" action="/submit">
+<h1 style="font-size: 24px; font-weight: bold; text-align: center; margin:
+10px;">Application for Inclusion of Name in Electoral Roll for First time Voter
+OR on Shifting from One Constituency to Another Constituency</h1>
+<p style="font-size: 18px; text-align: center; margin: 10px;">FORM-6</p>
+<p style="font-size: 18px; text-align: center; margin: 10px;">Issued by the
+ELECTION COMMISSION OF INDIA</p>
+<div>
+<label for="name" style="font-size: 16px; font-weight: bold; margin:
+5px;">Name:</label>
+<input type="text" id="name" name="name" required style="width: 300px;
+height: 30px; margin: 5px;">
+</div>
+<div>
+<label for="surname" style="font-size: 16px; font-weight: bold; margin:
+5px;">Surname (if any):</label>
+<input type="text" id="surname" name="surname" style="width: 300px; height:
+30px; margin: 5px;">
+</div>
+<div>
+<label for="relation" style="font-size: 16px; font-weight: bold; margin:
+5px;">Type of Relation:</label>
+<select id="relation" name="relation" required style="width: 300px; height:
+30px; margin: 5px;">
+<option value="father">Father</option>
+<option value="mother">Mother</option>
+<option value="husband">Husband</option>
+<option value="wife">Wife</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div>
+    <label for="relative" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Name and surname of Relative of Applicant:</label>
+    <input type="text" id="relative" name="relative" required style="width:
+    300px; height: 30px; margin: 5px;">
+    </div>
+    <div>
+    <label for="age" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Age (as on 1st January of current calendar year):</label>
+    <input type="number" id="age" name="age" min="18" required style="width:
+    300px; height: 30px; margin: 5px;">
+    </div>
+    <div>
+    <label for="dob" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Date of Birth (in DD/MM/YYYY format) (if known):</label>
+    <input type="date" id="dob" name="dob" style="width: 300px; height: 30px;
+    margin: 5px;">
+    </div>
+    <div>
+    <label for="gender" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Gender of Applicant:</label>
+    <input type="radio" id="male" name="gender" value="male" required
+    style="margin: 5px;">
+    <label for="male" style="font-size: 16px; margin: 5px;">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required
+    style="margin: 5px;">
+    <label for="female" style="font-size: 16px; margin: 5px;">Female</label>
+    <input type="radio" id="third" name="gender" value="third" required
+    style="margin: 5px;">
+    <label for="third" style="font-size: 16px; margin: 5px;">Third
+    Gender</label>
+    </div>
+    <div>
+    <label for="current" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Current address where applicant is ordinarily resident:</label>
+    <textarea id="current" name="current" rows="4" cols="50" required
+    style="width: 300px; height: 100px; margin: 5px;"></textarea>
+    </div>
+    <div>
+    <label for="permanent" style="font-size: 16px; font-weight: bold; margin:
+    5px;">Permanent address of applicant:</label>
+    <textarea id="permanent" name="permanent" rows="4" cols="50" required
+    style="width: 300px; height: 100px; margin: 5px;"></textarea>
+    </div>
+    <div>
+        <label for="epic" style="font-size: 16px; font-weight: bold; margin:
+5px;">EPIC No. (if issued):</label>
+<input type="text" id="epic" name="epic" style="width: 300px; height: 30px;
+margin: 5px;">
+</div>
+<div>
+<label for="disability" style="font-size: 16px; font-weight: bold; margin:
+5px;">Disability (if any):</label>
+<input type="checkbox" id="visual" name="disability" value="visual"
+style="margin: 5px;">
+<label for="visual" style="font-size: 16px; margin: 5px;">Visual
+impairment</label>
+<input type="checkbox" id="speech" name="disability" value="speech"
+style="margin: 5px;">
+<label for="speech" style="font-size: 16px; margin: 5px;">Speech & hearing
+disability</label>
+<input type="checkbox" id="locomotor" name="disability" value="locomotor"
+style="margin: 5px;">
+<label for="locomotor" style="font-size: 16px; margin: 5px;">Locomotor
+disability</label>
+<input type="checkbox" id="other" name="disability" value="other"
+style="margin: 5px;">
+<label for="other" style="font-size: 16px; margin: 5px;">Other</label>
+</div>
+<div>
+<label for="photo" style="font-size: 16px; font-weight: bold; margin:
+5px;">Paste one recent passport size photograph:</label>
+<input type="file" id="photo" name="photo" accept="image/*" required
+style="width: 300px; height: 50px; margin: 5px;">
+</div>
+<div style="text-align: center;">
+<input type="submit" value="Submit" style="width: 150px; height: 50px;
+background-color: green; color: white; font-size: 20px; font-weight: bold;
+margin: 10px;">
+<input type="reset" value="Reset" style="width: 150px; height: 50px;
+background-color: green; color: white; font-size: 20px; font-weight: bold;
+margin: 10px;">
+</div>
+</form>
+<script src="voerjs.js"></script>
+</body>
+</html>

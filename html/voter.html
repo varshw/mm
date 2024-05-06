@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+ <head>
+      <style>
+        div {
+              background-color: rgb(234, 235, 236);
+              border: 15px;
+              margin: 20px;
+              opacity:0.6;
+              }
+            h3,h4,h5,h6 {
+              background-color: rgb(96, 136, 142);
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              font-variant: initial;
+              color:black;
+              border: 15px;
+              margin: 20px;
+              opacity:0.5;
+              }
+            h1{
+            background-color: rgb(225, 232, 235);
+              border: 15px;
+              margin: 20px;
+              }
+            </style>
+        <title>voter id</title>
+       
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">E-REGISTRATION (Form -6)</h1>
+            <hr>
+            <h4 class="text-center">Application for inclusion of name in the electoral roll for first-time voters OR shifting from one constituency to another constituency</h4>
+    
+            <form action="/action_page.php">
+                    <label for="State" font>State:</label>
+                    <select name="State" id="State">
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    </select>
+        
+    <br>
+    
+    <form action="/action_page.php">
+        <label for="Assembly/constituency">Assembly/constituency:</label>
+        <select name="Assembly/constituency" id="Assembly/constituency">
+            <option value="Select">Select</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+        </select>
+      <form action="/action_page.php">
+        <label  for="District" align="left">District:</label>
+    
+        <select name="District" id="District"  >
+            <option value="Select">Select</option>
+            <option value="d1">d1</option>
+      <option value="d2">d2</option>
+      <option value="d3">d3</option>
+      <option value="d4">d4</option>
+    </select>
+    <p>I request that my name be included in the electrol roll for the above constituency</p>
+    <input type="radio" id="As a first time voter" value="As a first time voter">
+    <label for="As a first time voter">As a first time voter</label>
+    <p>or</p>
+    <input type="radio" id="due to shifting from another constituency" value="due to shifting from another constituency">
+    <label for="due to shifting from another constituency">due to shifting from another constituency</label><br>
+    <p>Particulars in support of my claim for inclusion in the electoral roll are given below:</p>
+    <h5>Mandatory Particulars</h5>
+    <form action="/action_page.php">
+        <span class="language">(A) Name </span>
+       <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+        <button class="save">
+        </button>
+    
+        <br> <span class="language">(B) Surname (if any) </span>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+        <button class="save-surname">
+         </button>
+	<br>
+        
+        <span class="language">(C) Name of the applicant's relative</span>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+        <button class="save-surname">
+        </button><br>
+        <span class="language">(D)Nickname of the applicant's relative</span>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+        <button class="save-surname">
+        </button>
+	<br>
+        
+        <span class="language">(E) Type of the relationship</span>
+       <select class="btn btn-secondary btn-sm dropdown-toggle" name="" id="state">
+            <option selected>Select</option>
+        </select>
+	<br>
+   
+    <span class="language">
+    (G) Date of birth (in the form of day/ month/ year) 
+    </span>
+    <input type="date">
+   <br>
+    <span class="language">(H) Applicant's gender</span>
+    <select class="btn btn-secondary btn-sm dropdown-toggle" name="" id="state">
+        <option selected>Select</option>
+        <option >Male</option>
+        <option >Female</option>
+    </select>
+    <h3>
+    Current address, whose applicant is nominally resident
+    </h3>
+<span class="language">(J)House no.</span>
+    <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+    <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+    <button class="save-surname">
+       <i class="far fa-keyboard"></i>
+    </button>
+    <br>
+    <span class="language">(K)Street / area / location</span>
+    <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+    <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+    <button class="save-surname">
+       <i class="far fa-keyboard"></i>
+    </button>
+    <br>
+    <span class="language">(L)Post Office:</span>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In English)" required>
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(In Regional)" required>
+        <button class="save-surname">
+           <i class="far fa-keyboard"></i>
+        </button>
+        <br>
+        <span class="language">(M)Pin Code</span>
+        <input type="text" required>
+        <br>
+        <span class="language">(N)State / Union Territory</span>
+        <select class="btn btn-secondary btn-sm dropdown-toggle" name="" id="state">
+            <option selected>Select</option>
+        </select>
+        <br>
+        
+        <span class="language">(O) Disability (if any) </span>
+        <br>
+       
+        <span class="language">
+            <input type="checkbox" name="" id="checkbox1" > Visual impairment
+        </span>
+        <span class="language">
+            <input type="checkbox" name="" id="" > Speech and hearing impairment
+        </span>
+        <span class="language">
+            <input type="checkbox" name="" id="" > Motion disablingt 
+        </span>
+        <span class="language">ti
+            <input type="checkbox" name="" id="" > other 
+        </span>
+        <input type="text" required>
+        <br>
+      
+        <span class="language">(P) Email ID (optional) </span>
+        <input type="text" required>
+        <br>
+        
+        <span class="language">(Q) mobile number (optional)&nbsp; </span>
+        +91 <input type="text" required>
+        <br>
+       
+        <h6>
+            Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB) 
+        </h6>
+      
+	<span class="language"> Your photo</span>
+	<input type="file" class="upload">
+      	<span class="language"> Age proof</span>
+        <input type="file" class="upload"> 
+        <br>
+  
+         <span class="language">Location</span>
+        <input type="text" required>
+        <span class="language">date</span>
+        <input type="date">
+        <br>
+        <div class="buttons">
+            <input type="reset" class="btn btn-success" value="Reset" id="reset">
+            <input type="submit" class="btn btn-success" value="Submit" id="submit">
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </form>
+</form> 
+<script src="voerjs.js"></script>
+</body>    
+</html>
